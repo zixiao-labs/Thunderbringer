@@ -1,0 +1,52 @@
+{
+  "name": "thunderbringer",
+  "version": "1.0.0",
+  "description": "司霆惊蛰-但是是为Electron开发的高性能Git操作库（明日方舟干员命名的）",
+  "keywords": [
+    "git",
+    "electron",
+    "arknights",
+    "libgit2",
+    "node-api",
+    "native"
+  ],
+  "homepage": "https://github.com/zixiao-labs/Thunderbringer#readme",
+  "bugs": {
+    "url": "https://github.com/zixiao-labs/Thunderbringer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zixiao-labs/Thunderbringer.git"
+  },
+  "license": "MIT",
+  "author": "amiya167",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "index.js",
+    "lib/",
+    "types/",
+    "prebuilds/",
+    "build/Release/thunderbringer.node"
+  ],
+  "scripts": {
+    "install": "node scripts/fetch-libgit2.js && cmake-js compile",
+    "build": "cmake-js compile",
+    "build:debug": "cmake-js compile -D",
+    "rebuild": "cmake-js rebuild",
+    "clean": "cmake-js clean",
+    "test": "jest --forceExit"
+  },
+  "dependencies": {
+    "node-addon-api": "^8.3.1",
+    "node-gyp-build": "^4.8.4"
+  },
+  "devDependencies": {
+    "cmake-js": "^7.3.0",
+    "jest": "^29.7.0"
+  },
+  "cmake-js": {
+    "runtime": "node"
+  }
+}
