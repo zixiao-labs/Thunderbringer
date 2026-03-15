@@ -28,10 +28,13 @@
     "lib/",
     "types/",
     "prebuilds/",
-    "build/Release/thunderbringer.node"
+    "build/Release/thunderbringer.node",
+    "src/",
+    "scripts/",
+    "CMakeLists.txt"
   ],
   "scripts": {
-    "install": "node scripts/fetch-libgit2.js && cmake-js compile",
+    "install": "node scripts/install.js",
     "build": "cmake-js compile",
     "build:debug": "cmake-js compile -D",
     "rebuild": "cmake-js rebuild",
@@ -39,11 +42,11 @@
     "test": "jest --forceExit"
   },
   "dependencies": {
+    "cmake-js": "^7.3.0",
     "node-addon-api": "^8.3.1",
     "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
-    "cmake-js": "^7.3.0",
     "jest": "^29.7.0"
   },
   "cmake-js": {

@@ -1,11 +1,8 @@
-deps/
-src/
 build/
 test/
-scripts/
 .git*
 .claude/
 .idea/
 .vscode/
-CMakeLists.txt
 *.log
+deps/
