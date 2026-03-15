@@ -1,6 +1,6 @@
 {
   "name": "thunderbringer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "司霆惊蛰-但是是为Electron开发的高性能Git操作库（明日方舟干员命名的）",
   "keywords": [
     "git",
@@ -49,6 +49,5 @@
   "devDependencies": {
     "jest": "^29.7.0"
   },
-  "cmake-js": {
-  }
+  "cmake-js": {}
 }
