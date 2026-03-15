@@ -1,4 +1,4 @@
-# Thunderbringer ⚡
+# Leizi the Thunderbringer⚡
 
 > 司霆惊蛰 — 为 Electron 打造的高性能 libgit2 原生绑定
 
