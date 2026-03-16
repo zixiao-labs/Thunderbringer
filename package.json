@@ -31,7 +31,8 @@
     "build/Release/thunderbringer.node",
     "src/",
     "scripts/",
-    "CMakeLists.txt"
+    "CMakeLists.txt",
+    "binding.gyp"
   ],
   "scripts": {
     "install": "node scripts/install.js",

@@ -63,8 +63,9 @@ if (isElectron) {
 
 // Compile with cmake-js
 try {
-  const cmakeJs = path.join(rootDir, 'node_modules', '.bin', 'cmake-js');
-  execSync(`"${cmakeJs}" ${cmakeJsArgs.join(' ')}`, {
+  const cmakeJsPkgDir = path.dirname(require.resolve('cmake-js/package.json'));
+  const cmakeJs = path.join(cmakeJsPkgDir, 'bin', 'cmake-js');
+  execSync(`"${process.execPath}" "${cmakeJs}" ${cmakeJsArgs.join(' ')}`, {
     cwd: rootDir,
     stdio: 'inherit',
   });
