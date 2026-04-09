@@ -208,7 +208,7 @@ void InitReference(Napi::Env env, Napi::Object exports) {
   reference.Set("list", Napi::Function::New(env, List, "list"));
   reference.Set("create", Napi::Function::New(env, Create, "create"));
   reference.Set("createSymbolic", Napi::Function::New(env, CreateSymbolic, "createSymbolic"));
-  reference.Set("delete", Napi::Function::New(env, Delete, "delete"));
+  reference.Set("_delete", Napi::Function::New(env, Delete, "_delete"));
 
   // Reference type constants
   reference.Set("TYPE_INVALID", Napi::Number::New(env, GIT_REFERENCE_INVALID));

@@ -140,7 +140,7 @@ void InitTag(Napi::Env env, Napi::Object exports) {
   auto tag = Napi::Object::New(env);
   tag.Set("create", Napi::Function::New(env, Create, "create"));
   tag.Set("createLightweight", Napi::Function::New(env, CreateLightweight, "createLightweight"));
-  tag.Set("delete", Napi::Function::New(env, Delete, "delete"));
+  tag.Set("_delete", Napi::Function::New(env, Delete, "_delete"));
   tag.Set("list", Napi::Function::New(env, ListTags, "list"));
   exports.Set("Tag", tag);
 }

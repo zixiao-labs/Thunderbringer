@@ -208,7 +208,7 @@ void InitRemote(Napi::Env env, Napi::Object exports) {
   auto remote = Napi::Object::New(env);
   remote.Set("list", Napi::Function::New(env, List, "list"));
   remote.Set("add", Napi::Function::New(env, Add, "add"));
-  remote.Set("delete", Napi::Function::New(env, Delete, "delete"));
+  remote.Set("_delete", Napi::Function::New(env, Delete, "_delete"));
   remote.Set("getUrl", Napi::Function::New(env, GetUrl, "getUrl"));
   remote.Set("fetch", Napi::Function::New(env, Fetch, "fetch"));
   remote.Set("push", Napi::Function::New(env, Push, "push"));
