@@ -249,7 +249,7 @@ static Napi::Value Current(const Napi::CallbackInfo& info) {
 void InitBranch(Napi::Env env, Napi::Object exports) {
   auto branch = Napi::Object::New(env);
   branch.Set("create", Napi::Function::New(env, Create, "create"));
-  branch.Set("delete", Napi::Function::New(env, Delete, "delete"));
+  branch.Set("_delete", Napi::Function::New(env, Delete, "_delete"));
   branch.Set("list", Napi::Function::New(env, List, "list"));
   branch.Set("rename", Napi::Function::New(env, Rename, "rename"));
   branch.Set("lookup", Napi::Function::New(env, Lookup, "lookup"));

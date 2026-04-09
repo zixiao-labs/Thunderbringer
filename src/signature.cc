@@ -54,7 +54,7 @@ static Napi::Value CreateWithTime(const Napi::CallbackInfo& info) {
   return signature_to_js(env, sig);
 }
 
-// Signature.default(repo) → { name, email, time, offset }
+// Signature._default(repo) → { name, email, time, offset }
 static Napi::Value Default(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -80,7 +80,7 @@ void InitSignature(Napi::Env env, Napi::Object exports) {
   auto signature = Napi::Object::New(env);
   signature.Set("create", Napi::Function::New(env, Create, "create"));
   signature.Set("createWithTime", Napi::Function::New(env, CreateWithTime, "createWithTime"));
-  signature.Set("default", Napi::Function::New(env, Default, "default"));
+  signature.Set("_default", Napi::Function::New(env, Default, "_default"));
   exports.Set("Signature", signature);
 }
 
